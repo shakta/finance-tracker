@@ -18,15 +18,11 @@
   <%= render 'common/spinner' %>
   
   <% if @stock %>
-  flash[:success] = "Found a stock"
-    <div id="stock-lookup-results" class="well results-block">
+      <div id="stock-lookup-results" class="well results-block">
       <strong>Symbol:</strong> <%= @stock.ticker %>
       <strong>Name:</strong> <%= @stock.name %>
       <strong>Price:</strong> <%= @stock.price %>
     </div>
-  <% else %>
-  flash[:danger] = "No data"
-  <strong>flash[:danger]</strong>
   <% end %>
     <div id="stock-lookup-errors"></div>
 
